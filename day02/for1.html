@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문 - for문</title>
+    <script>
+        // 1부터 10까지 출력 
+        // for(초기값; 종료값; 증감값)
+       
+        // while문을 개선
+/*          for(var i=1; i<=10; i++){
+            console.log(i);
+            }
+*/
+        // 1부터 10까지 합계
+        let total = 0; // 초기화
+        for(var i=1; i<=10; i++){
+        total += i;
+        console.log("i = " + i + ", total = " + total);
+        }
+        console.log("합계 : " + total);
+
+
+        // 구구단 6단 출력하기 
+        /*
+            6 x 1 = 6 * 1
+            6 x 2 = 6 * 2
+            6 x 3 = 6 * 3
+            ...
+            6 x 9 = 6 * 9
+        */
+        let dan = 6;
+        for(var i=1; i<=9; i++){
+        result = dan * i;
+        console.log(dan + " X " + i + " = " + result);
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

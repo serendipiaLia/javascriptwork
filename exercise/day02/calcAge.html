@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나이계산 프로그램</title>
+    <script>
+        // 조건 : 현재 년도는 상수로 선언
+        // 나이 = 현재 년도 - 태어난 해
+        let Myage = prompt("태어난 연도를 입력하세요.(YYYY)");
+        
+        // NaN 처리
+        if(Myage == null || Myage == ""){
+            document.write("입력이 취소 되었습니다.");
+        }else if(isNaN(Myage)){
+            document.write("숫자를 입력해주세요.")
+        }else{
+            const YEAR = 2023;
+            let age = (YEAR - Myage) + 1 ;
+            document.write(YEAR + "현재,<br>" + Myage + "년에 태어난 사람의 나이는 " + age + "세입니다." );
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
