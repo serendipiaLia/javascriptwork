@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 : switch ~ case문</title>
+    <script>
+        // 순위에 따른 메달 출력 (switch ~ case문)
+        let rank = parseInt(prompt("순위를 입력하세요"));
+        // prompt () 함수는 입력값은 기본적으로 문자열로 반환. 
+        // let rank = prompt("순위 입력") >> 오류로 no medal로만 출력됨! rank를 parseInt 선언하거나, 위 처럼 괄호로 묶어주기!
+        
+        switch(rank) { // switch (parseInt(rank)) 혹은 switch (Number(rank)) 사용해서 입력값을 숫자로 변환도 가능! 
+            case 1:
+                document.write("Gold medal<br>"); break;
+            case 2:
+                document.write("Silver medal<br>"); break;
+            case 3: 
+                document.write("Bronze madal<br>"); break;
+            default: 
+                document.write("no medal... TnT<br>"); break;
+        }
+/*
+        // if ~ else문
+        if(rank == 1){
+            document.write("Gold medal<br>")
+        }else if(rank == 2){
+            document.write("Silver medal<br>")
+        }else if(rank == 3){
+            document.write("Bronze medal<br>")
+        }else{
+            document.write("no medal... TnT<br>")
+        }
+*/       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
