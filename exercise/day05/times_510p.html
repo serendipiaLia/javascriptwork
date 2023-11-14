@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>times 510p</title>
+</head>
+<body>
+    <h2>4의 배수 일까 아닐까</h2>
+    <!-- 취소 버튼 눌렀을 때 결과 보이지 않는 값 설정 -->
+    <script>
+        let Number = prompt("숫자를 입력하시오.");
+
+        if(Number !== null){ // 입력값이 null이 아니면, 하기 if~else문 실행
+           (Number % 4 == 0) ? document.write(Number + "는(은) 4의 배수입니다.") 
+                                : document.write(Number + "는(은) 4의 배수가 아닙니다.");
+        }else{ // 취소 버튼을 누르면 !
+            alert("입력이 취소되었습니다. 새로고침 하세요.")
+        }
+
+    </script>
+    
+</body>
+</html>
