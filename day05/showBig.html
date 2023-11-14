@@ -28,13 +28,20 @@
         let bigPic = document.querySelector("#cup");
         let smallPics = document.querySelectorAll(".small");
         
-        for(let i=0; i<smallPics.length; i++){
+/*      for(let i=0; i<smallPics.length; i++){
             smallPics[i].onclick = showBig; // 호출
         }
         function showBig(){
             // console.log(bigPic.getAttribute("src"));
             // this.src : 클릭한 대상 이미지 소스 경로
             bigPic.setAttribute("src", this.src);
+        }
+*/
+        // 위 실행함수 단축한 표현
+        for(let i=0; i<smallPics.length; i++){
+            smallPics[i].onclick = function(){
+            bigPic.setAttribute("src", this.src);
+            }
         }
     </script>
     
