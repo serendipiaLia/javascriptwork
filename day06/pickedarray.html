@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열로 당첨자 수 선언한 추첨 프로그램</title>
+    <style>
+        section{width: 800px; margin: 0 auto; text-align: center;}
+        h1{background-color: bisque; border: 1px solid sandybrown; display: inline-block; /* 텍스트에 맞춰 테두리 잘림*/
+            padding: 10px 20px;}
+        p{text-align: center;}
+    </style>
+</head>
+<body>
+    <section>
+        <h1>당첨자 발표</h1>
+    </section>
+    
+    <script>
+        let member = prompt("전체 응모자 수 : ") // 전체 응모자 수
+        let winner = prompt("당첨자 수 : ")
+        
+        if(member == null || winner == null){
+            document.write("<p>입력이 취소되었습니다.</p>")
+        }else if(isNaN(member) || isNaN(winner)){
+            document.write("<p>숫자를 입력해 주세요.</p>")
+        }else{
+            document.write("<p>전체 응모자 수 : " + member + "명</p>" )
+            document.write("<p>당첨자 : ")
+                
+                member = parseInt(member); // 입력된 문자를 숫자로 변환
+                member = parseInt(winner); // 입력된 문자를 숫자로 변환
+                let winArray =  new Array(winner); // 당첨자 수 -> 배열로 선언
+                
+                // winner 명 추첨(저장)
+                for(let i=0; i<winArray.length; i++){
+                    let pickedOne = Math.floor(Math.random()*member) + 1;
+                    winArray[i] = pickedOne;
+                    // 중복 번호가 발생한 경우, 해당 번호 인덱스에서 재 추첨
+                    for(j=0; j<i; j++){
+                        if(winArray[j] == winArray[i]){
+                            i--;
+                        }
+                    }
+                }
+                // winner 출력
+                for(let i=0; i<winArray.length; i++){
+                    document.write(winArray[i] + "번 ")
+            }
+            document.write("</p>");
+        }
+        
+        </script>
+        </body>
+        </html>
