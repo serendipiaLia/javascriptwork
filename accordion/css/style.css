@@ -1,0 +1,20 @@
+/*  faq.html과 연결 */
+@charset "utf-8";
+
+/* 공통 영역 */
+*{margin: 0; padding: 0;} /* >>모든 여백 초기화 */
+ol{list-style: none;}
+a{text-decoration: none; color: darkorange;}
+
+/* section부분 */
+#content{width: 1000px; margin: 30px auto;}
+#content h3{padding: 20px;}
+#content .accordion_box ol li{border-top: 4px solid orange;}
+/* 클릭시 불릿 버튼 변경!  */
+#content .accordion_box ol li h4{margin: 20px 30px; background: url("../images/bullet_down.png") no-repeat right}
+#content .accordion_box ol li.on h4{background: url("../images/bullet_up.png") no-repeat right}
+#content .accordion_box ol li h4 span{margin-right: 10px; font-weight: bolder;}
+
+/*  p태그 내용 숨기기 및 보이기 */
+.accordion_box ol li p{line-height: 2; visibility: hidden; padding: 10px 40px;}
+.accordion_box ol li.on p{visibility: visible; background-color: ivory;}

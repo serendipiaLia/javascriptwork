@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <style>
+        .text{color: palevioletred;}
+    </style>
+    <script>
+        //$("p").addClass("text") : p태그에 text클래스를 생성
+        $(document).ready(function(){
+           $("#btn1").on('click', function(){
+               $("p").addClass("text"); // text클래스 생성
+           });
+           $("#btn2").on('click', function(){
+               $("p").removeClass("text"); // text클래스 제거
+           });
+           $("#btn3").on('click', function(){
+               $("p").toggleClass("text"); // text클래스 생성 및 제거 
+           });
+        })
+    </script>
+</head>
+<body>
+    <p>요소에 class 속성을 추가 합니다.</p>
+
+    <button id="btn1">addClass</button>
+    <button id="btn2">removeClass</button>
+    <button id="btn3">toggleClass</button>
+</body>
+</html>

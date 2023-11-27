@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 단어를 찾아 일치하면 실행
+        // 문자열을 찾으면, indexOf("문자열") >= 0
+        // 문자열을 못 찾으면, indexOf("문자열") = -1 반환
+        while(true){
+            let input = prompt("단어를 입력해주세요");
+
+            if(input.indexOf("hello") >=0 ){
+                alert("hello :D");
+            }else if(input.indexOf("시") >= 0 || input.indexOf("분") >= 0){
+                const now = new Date();
+                let hours = now.getHours();
+                let minutes = now.getMinutes();
+                alert("현재 시간 : " + hours + "시" + minutes + "분");
+            }else if(input.indexOf("bye") >= 0){
+                alert("bye bye :> See ya");
+                break;
+            }else{
+                alert("IDK .. TnT");
+            }
+        }
+    </script>
+</body>
+</html>

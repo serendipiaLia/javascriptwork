@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html()</title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+    /*    $(function(){
+            $(".add").click(function(){
+                $(".pic").html("<img src='images/coffee-blue.jpg'>");
+                $(".pic").css("padding-top", '10px');
+            })
+        }) */
+        
+        // on() : 선택한 요소에 대해 이벤트 핸들러를 연결함
+        $(function(){
+            $(".add").css({"text-decoration" : "none" , 'color' : 'gold', 'font-weight' : "bold"});
+            $(".add").on('mouseover', function(){
+                $(".pic").html("<img src='images/coffee-blue.jpg' alt='coffee'>");
+                $(".pic").css("padding-top", '10px');
+                $(".pic").css("display", "block");
+            })
+            $(".add").on('mouseout', function(){
+                $(".pic").css("padding-top", '10px');
+                $(".pic").css("display", "none");
+            })
+        })
+    </script>
+</head>
+<body>
+    <a href="#" class="add">Add images</a>
+    <div class="pic"></div>
+</body>
+</html>

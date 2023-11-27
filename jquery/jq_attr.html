@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 attr()함수</title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+        // attr() - 개체의 속성을 변경할 수 있음
+        $(document).ready(function(){
+            $(".zoomin").click(function(){
+                $("img").attr("width", "700");
+            })
+            $(".zoomout").click(function(){
+                $("img").attr("width", "450");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <img src="images/happy.jpeg" alt="happy">
+    </div>
+    <button class="zoomin">확대</button>
+    <button class="zoomout">축소</button>
+</body>
+</html>

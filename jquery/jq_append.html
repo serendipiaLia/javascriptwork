@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery의 append()함수</title>
+    
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            //append(태그) - 선택한 요소의 끝에 새로운 요소 추가
+            //html(태그) - 부모요소의 하위 요소를 생성함
+            $("#name").css('background-color', 'peachpuff');
+            $(".info").append("<p>nice to meet U</p>");
+           // $(".info p").next().text("<p>how r u</p>") -> 내용 업데이트
+           $(".info").append("<img src='images/doit.jpg' alt='do it study'>")
+           $(".pic").html("<img src='images/coffee-blue.jpg' alt='coffee'>")
+        })
+    </script>
+</head>
+<body>
+    <h2>Welcome to my homepage!</h2>
+    <div class="info">
+        <p id="name">my name is nagyunglee</p>
+        <p>Im lived in Bucheon, South korea</p>
+    </div>
+    <div class="pic"></div>
+</body>
+</html>

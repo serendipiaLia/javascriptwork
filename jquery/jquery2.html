@@ -8,7 +8,11 @@
     <script>
         // 제이쿼리 방식 - 실행 환경
         $(document).ready(function(){
-            $("p").text("Hello!!") // $(태그선택자, id선택자, class선택자)
+            // text() - 텍스트를 추가(생성)함
+            $("#show").text("Hello!!") // $(태그선택자, id선택자, class선택자)
+            // css()함수사용
+            $("#show").css({'font-size':'2em', 'color':'burlywood'})
+            
         })
     </script>
 </head>
